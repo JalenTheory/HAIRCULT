@@ -1,0 +1,26 @@
+﻿Simple Type Converter
+
+
+public class SimpleTypeConverter : IValueConverter
+
+{
+
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+
+    {
+
+        return System.Convert.ChangeType(value, targetType, CultureInfo.CurrentCulture);
+
+    }
+
+ 
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+
+    {
+
+        return System.Convert.ChangeType(value, targetType, CultureInfo.CurrentCulture);
+
+    }
+
+}

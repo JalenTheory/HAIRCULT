@@ -1,0 +1,84 @@
+﻿<phone:PhoneApplicationPage
+      x:Class="HAIRCULT.salon_map" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+     xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
+    xmlns:Microsoft_Phone_Controls_Maps="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps" 
+    SupportedOrientations="Portrait"  Orientation="Portrait" 
+    shell:SystemTray.IsVisible="True">
+    
+    
+    <phone:PhoneApplicationPage.Resources >
+        <!--<DataTemplate x:Key="ItemTemplate">
+        	<StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+
+              
+                <Image Source="{Binding image}" Height="84" Width="84"/>
+        		<TextBlock Text="{Binding sname}"  TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="Black" FontSize="40"/>
+                     
+                
+                <StackPanel Height="30" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,0">
+                    <es:RegularPolygon Fill="#FFF4F4F5" InnerRadius="0.47211" PointCount="5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="35"/>
+                    <es:RegularPolygon Fill="#FFF4F4F5" InnerRadius="0.47211" PointCount="5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="35"/>
+                    <es:RegularPolygon Fill="#FFF4F4F5" InnerRadius="0.47211" PointCount="5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="35"/>
+                    <es:RegularPolygon Fill="#FFF4F4F5" InnerRadius="0.47211" PointCount="5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="35" />
+                    <es:RegularPolygon Fill="#FFF4F4F5" InnerRadius="0.47211" PointCount="5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="35"/>
+                </StackPanel>
+                
+        	</StackPanel>
+        </DataTemplate>-->
+
+        <DataTemplate x:Key="PinItemTemplate">
+            <Microsoft_Phone_Controls_Maps:Pushpin Location="{Binding slocation}" 
+                    MouseLeftButtonUp="Pushpin_MouseLeftButtonUp_1"
+                    Content="{Binding sname}">
+                </Microsoft_Phone_Controls_Maps:Pushpin>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    
+    
+   
+	<phone:PhoneApplicationPage.FontFamily>
+		<StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+	</phone:PhoneApplicationPage.FontFamily>
+	<phone:PhoneApplicationPage.FontSize>
+		<StaticResource ResourceKey="PhoneFontSizeNormal"/>
+	</phone:PhoneApplicationPage.FontSize>
+	<phone:PhoneApplicationPage.Foreground>
+		<StaticResource ResourceKey="PhoneForegroundBrush"/>
+	</phone:PhoneApplicationPage.Foreground>
+    
+    
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <controls:Pivot x:Name="MyPivot" Foreground="Black">
+       
+            <controls:PivotItem Header="Salon" >
+                <Microsoft_Phone_Controls_Maps:Map Name="Map1" ZoomBarVisibility="Visible"  CredentialsProvider="Ar9nEBzzSY5NqP_4ZNbb__k-Hj-bDeqHMna6WhNnqK19ZEUxe4a0zZqA8IlqpStc" VerticalAlignment="Bottom" Height="632">
+                    <Microsoft_Phone_Controls_Maps:MapItemsControl x:Name="MapsPins" ItemsSource="{Binding SalonCollection}" ItemTemplate="{StaticResource PinItemTemplate}"/>
+                    
+                </Microsoft_Phone_Controls_Maps:Map>
+
+            </controls:PivotItem>
+
+            <!--<controls:PivotItem Header="List" Foreground="Black">
+                <Grid>
+                    <ListBox x:Name="SalonDBListBox" 
+                             ItemTemplate="{StaticResource ItemTemplate}"   
+                             SelectionChanged="ListBox_SelectionChanged"  /> 
+                </Grid>
+             </controls:PivotItem>-->
+        
+        </controls:Pivot>
+
+    </Grid>
+    
+</phone:PhoneApplicationPage>

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAIRCULT", "HAIRCULT\HAIRCULT.csproj", "{3DD4256B-F765-4DE5-AA8D-638DBBF46985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxService", "..\MessageBoxService\MessageBoxService.csproj", "{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://stcleppavaara.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HAIRCULT\\HAIRCULT.csproj
+		SccProjectName1 = HAIRCULT
+		SccLocalPath1 = HAIRCULT
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD4256B-F765-4DE5-AA8D-638DBBF46985}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0D9C32-A437-4FCB-9A3D-5FE3A5703221}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

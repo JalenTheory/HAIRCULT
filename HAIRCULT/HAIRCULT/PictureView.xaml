@@ -1,0 +1,47 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="HAIRCULT.PictureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" BorderBrush="White">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image Stretch="Uniform" Source="{Binding Image}"/>
+            <Image Margin="-16,-44,-13,188" Source="{Binding}" Stretch="Fill" d:LayoutOverrides="VerticalAlignment"/>
+            <TextBlock Height="85" Margin="0,0,8,99" TextWrapping="Wrap" Text="#blonde  #flip  #side-sweep " VerticalAlignment="Bottom" FontSize="32" Foreground="Black"/>
+            <Rectangle Fill="Black" Height="54" Stroke="Black" VerticalAlignment="Bottom" Opacity="0.2" Margin="-16,0,-13,130"/>
+            <TextBlock x:Name="PictureName" Text="{Binding}" HorizontalAlignment="Left" Height="143" Margin="8,0,0,-48" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="214" Foreground="Black" FontSize="48" />
+        </Grid>
+        <TextBlock HorizontalAlignment="Right" Margin="0,0,12,52" TextWrapping="Wrap" Grid.Row="1" VerticalAlignment="Bottom" Foreground="Black" Height="51" Width="153" FontSize="29.333"><Run Text="Details" TextDecorations="Underline"/></TextBlock>
+        <Rectangle Fill="Black" HorizontalAlignment="Right" Height="51" Margin="0,0,0,52" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="192" Opacity="0.39"/>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="BarIcons/appbar.favs.rest.png" Text="favourite it"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.feature.email.rest.png" Text="share"/>
+			
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

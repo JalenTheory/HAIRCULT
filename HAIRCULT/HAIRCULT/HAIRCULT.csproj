@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DD4256B-F765-4DE5-AA8D-638DBBF46985}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HAIRCULT</RootNamespace>
+    <AssemblyName>HAIRCULT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>HAIRCULT.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>HAIRCULT.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls.Maps" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Phone.Reactive" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\sl4-windowsphone71\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Observable" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="favouriteStyles_Page.xaml.cs">
+      <DependentUpon>favouriteStyles_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PictureView.xaml.cs">
+      <DependentUpon>PictureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="salon_map.xaml.cs">
+      <DependentUpon>salon_map.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SplashScreenControl.xaml.cs">
+      <DependentUpon>SplashScreenControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="favouriteStyles_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PictureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="salon_map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreenControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Converters\BitmapToImageConverter.txt" />
+    <Content Include="Converters\BooleanToVisibiltyConverter.txt" />
+    <Content Include="Converters\ColorToBrushConverter.txt" />
+    <Content Include="Converters\SimpelTypeConverter.txt" />
+    <Content Include="Converters\StringFormatConverter.txt" />
+    <Content Include="Converters\UnitTestingConverter.txt" />
+    <Content Include="files\haircult.txt" />
+    <Content Include="IMAGES\haircult_logo.png.png" />
+    <Content Include="IMAGES\PanoramaBackground.jpg" />
+    <Content Include="IMAGES\scroller_background.png" />
+    <Content Include="phoneImgs\173x173.png" />
+    <Content Include="phoneImgs\62x62.png" />
+    <Content Include="phoneImgs\BGRND.png" />
+    <Content Include="phoneImgs\PAN.png" />
+    <Content Include="phoneImgs\SPLASH.png" />
+    <Content Include="sibs.jpg" />
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BarIcons\appbar.delete.rest.png" />
+    <Content Include="BarIcons\appbar.favs.rest.png" />
+    <Content Include="BarIcons\appbar.feature.camera.rest.png" />
+    <Content Include="BarIcons\appbar.feature.email.rest.png" />
+    <Resource Include="BarIcons\appbar.feature.search.rest.png" />
+    <Content Include="BarIcons\appbar.folder.rest.png" />
+    <Content Include="BarIcons\appbar.save.rest.png" />
+    <Content Include="BarIcons\phone.png" />
+    <Content Include="BarIcons\appbar.gotodate.rest.png" />
+    <Content Include="BarIcons\appbar.heart2.empty.rest.png" />
+    <Content Include="BarIcons\appbar.heart2.rest.png" />
+    <Resource Include="IMAGES\chloe moretz #bob #short.jpg" />
+    <Resource Include="IMAGES\christina ricci #layered #short.jpg" />
+    <Resource Include="IMAGES\emily browning #short.jpg" />
+    <Resource Include="IMAGES\I18.jpg" />
+    <Resource Include="IMAGES\ginnifer goodwin #short #sassy.jpg" />
+    <Resource Include="IMAGES\halle berry #short #chic #pixie.jpg" />
+    <Resource Include="IMAGES\I10.jpg" />
+    <Resource Include="IMAGES\jenna elfman #pixie cut.jpg" />
+    <Resource Include="IMAGES\keira knightly #short #straight #bob.jpg" />
+    <Resource Include="IMAGES\rooney mara #short #ponytail #blunt bangs.jpg" />
+    <Resource Include="IMAGES\vanessa hudgen #waves.jpg" />
+    <Resource Include="IMAGES\jojo levesque %40nylon #black #long.jpg" />
+    <Resource Include="IMAGES\kristineAvatar.jpg" />
+    <Resource Include="IMAGES\I3.jpg" />
+    <Resource Include="IMAGES\I4.jpg" />
+    <Resource Include="IMAGES\I5.jpg" />
+    <Resource Include="IMAGES\I6.jpg" />
+    <Resource Include="IMAGES\I7.jpg" />
+    <Resource Include="IMAGES\I8.jpg" />
+    <Resource Include="IMAGES\I9.jpg" />
+    <Resource Include="IMAGES\carrie-underwood #curly #blonde.jpg" />
+    <Resource Include="IMAGES\charlize-theron-s_#medium #blonde.jpg" />
+    <Resource Include="IMAGES\jessica-stroup #medium.jpg" />
+    <Resource Include="IMAGES\s_AnnaLynne-McCord #blonde #parted #straight #medium.jpg" />
+    <Resource Include="IMAGES\s_p20100129100150_28605.jpg" />
+    <Resource Include="IMAGES\adele.jpg" />
+    <Resource Include="IMAGES\jessie J #ponytail #fringe.jpg" />
+    <Resource Include="IMAGES\I19.jpg" />
+    <Resource Include="IMAGES\katy perry.jpg" />
+    <Resource Include="IMAGES\Rihanna.jpg" />
+    <Resource Include="IMAGES\taylor swift.jpg" />
+    <Resource Include="IMAGES\I1.jpeg" />
+    <Resource Include="IMAGES\I2.jpeg" />
+    <Content Include="SampleData\SalonDB_Files\image02.png" />
+    <Content Include="SampleData\SalonDB_Files\image03.png" />
+    <Content Include="SampleData\SalonDB_Files\image04.png" />
+    <Content Include="SampleData\SalonDB_Files\image05.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
