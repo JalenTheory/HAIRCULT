@@ -53,7 +53,7 @@ namespace HAIRCULT
 
                     System.Windows.Media.Imaging.BitmapImage bmp = new System.Windows.Media.Imaging.BitmapImage();
                     bmp.SetSource(e.ChosenPhoto);
-                   ProfilePic.Source = bmp;
+                   ProfilePic.Source = bmfp;
 
 
                    ProfilePic.Stretch = Stretch.Uniform;
